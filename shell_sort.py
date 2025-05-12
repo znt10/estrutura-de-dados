@@ -1,20 +1,24 @@
 import time
 import matplotlib.pyplot as plt
 
-# Shell Sort com contagem de operações
 def shell_sort(arr):
     n = len(arr)
     gap = n // 2
     operacoes = 0
-    
+    #o gap é matade da lista
     while gap > 0:
         for i in range(gap, n):
+            #o temp é o elemento que vai ser movido
+            #e o j é o index do é msm index de i
             temp = arr[i]
             j = i
+            #arr[j-gap] se for maior que o temp o elemento arr[j-arr] é movido para lugar do temp 
             while j >= gap and arr[j - gap] > temp:
                 arr[j] = arr[j - gap]
+                #aqui o j fica menor que o gap, para que o loop não continue
                 j -= gap
                 operacoes += 1
+            #aqui o temp é movido para a posição do index j, a qual é o index do elemento que era maior que o temp
             arr[j] = temp
             operacoes += 1
         gap //= 2

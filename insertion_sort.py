@@ -5,12 +5,18 @@ def insertion_sort(lista):
     for i in range(1, len(lista)):
         chave = lista[i]
         j = i - 1
+        #a chave é o elemento q era movido para outra posição
+        #e j é index do elemento anterior a chave
+        #e lista[j] que é o elemento antes ta chave
         while j >= 0 and lista[j] > chave:
             comparacoes += 1
+            #quando a chave for menor que o elemento anterior a lista[j] era movido pra frente
             lista[j + 1] = lista[j]
             j -= 1
+        #quando a chave for maior que o elemento anterior a lista[j] era movido pra frente
         lista[j + 1] = chave
         if j >= 0:
+
             comparacoes += 1
     return comparacoes
 
