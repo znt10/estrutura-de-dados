@@ -35,7 +35,7 @@ fim2 = time.perf_counter()
 tempo_execucao2 = fim2 - inicio2
 
 # Caso 3 – Pior caso (lista decrescente grande)
-numeros_grandes = list(range(1000, 0, -1))  # Lista de 1000 a 1
+numeros_grandes = list(range(100, 0, -1))  
 inicio3 = time.perf_counter()
 operacoes3 = shell_sort(numeros_grandes[:])
 fim3 = time.perf_counter()

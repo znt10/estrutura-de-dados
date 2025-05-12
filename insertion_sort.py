@@ -23,7 +23,7 @@ tempo_execucao1 = fim1 - inicio1
 print()
 
 # Caso 2 – Caso médio
-numeros_medios = list(range(50, 0, -1))  # Lista reversa de 50 a 1
+numeros_medios = list(range(50, 0, -1))  
 inicio2 = time.perf_counter()
 operacoes2 = insertion_sort(numeros_medios[:])
 fim2 = time.perf_counter()
@@ -31,7 +31,7 @@ tempo_execucao2 = fim2 - inicio2
 print()
 
 # Caso 3 – Pior caso (lista decrescente grande)
-numeros_grandes = list(range(100, 0, -1))  # Lista de 1000 a 1
+numeros_grandes = list(range(100, 0, -1))  
 inicio3 = time.perf_counter()
 operacoes3 = insertion_sort(numeros_grandes[:])
 fim3 = time.perf_counter()
